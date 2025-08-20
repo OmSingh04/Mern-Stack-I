@@ -4,10 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
   </head>
+  <style>
+    body{
+        background-color: grey;
+        margin: 0;
+        padding: 0;
+    }
+    h1{
+        text-align: center;
+        font-size: 80px;
+        font-family: "Edu NSW ACT Cursive", cursive;
+
+    }
+    form{
+        text-align: center;
+    }
+    .main {
+        display: flex;
+        justify-content: center;
+    }
+    .form{
+        margin-top: 40px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        background-color: lightgray;
+        height: 500px;
+        width: 500px;
+    }
+   
+  </style>
   <body>
     <h1>Registration Form</h1>
-    <form>
+    <div class="main">
+        <div class="form">
+        <form>
       <label for="fname">First Name:</label>
       <input type="text" id="fname" name="fname"><br><br>
 
@@ -42,6 +77,8 @@
       <input type="submit" value="Submit">
       <input type="reset" value="Reset">
     </form>
+    </div>
+    </div>
   </body>
 </html>
 
