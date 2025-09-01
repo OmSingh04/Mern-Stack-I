@@ -1,2 +1,2 @@
 # Mern-Stack-I
-Practicising through integraming intership provided by our university..
+Practicising through integramind intership provided by our university..
