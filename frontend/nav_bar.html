@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .nav_main {
+            background-color: #333;
+            color: white;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+        .nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .nav li {
+            display: inline;
+            margin: 0 1rem;
+            transition: color 0.2s, background 0.2s, border-radius 0.2s;
+            padding: 6px 14px;
+            cursor: pointer;
+        }
+        .nav li:hover {
+            background: #444;
+            color: #ffd700;
+            border-radius: 6px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+        }
+        .search {
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            flex: 1;
+            justify-content: center;
+        }
+        .search-box {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .search-box input[type="text"] {
+            padding: 8px 36px 8px 12px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            transition: box-shadow 0.2s, border 0.2s;
+        }
+        .search-box input[type="text"]:hover,
+        .search-box input[type="text"]:focus {
+            box-shadow: 0 0 0 2px #ffd700;
+            border: 1px solid #ffd700;
+        }
+        .search-box .search-icon {
+            position: absolute;
+            right: 10px;
+            font-size: 1.2rem;
+            color: #888;
+            transition: color 0.2s;
+            pointer-events: none;
+        }
+        .search-box input[type="text"]:hover + .search-icon,
+        .search-box input[type="text"]:focus + .search-icon {
+            color: #ffd700;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav_main">
+        <div class="nav">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Contact</li>
+            </ul>
+            <div class="search">
+                <div class="search-box">
+                    <input type="text" placeholder="Search...">
+                    <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
