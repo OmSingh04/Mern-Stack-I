@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Blog Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f7f7f7;
+            color: #222;
+        }
+        header {
+            background: #232946;
+            color: #fff;
+            padding: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            position: relative;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 32px;
+            height: 70px;
+            background: #232946;
+        }
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .navbar-logo img {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ffd803;
+            background: #fff;
+        }
+        .navbar-title {
+            font-size: 1.7rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #ffd803;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 8px 18px;
+            border-radius: 6px;
+            transition: background 0.2s, color 0.2s;
+        }
+        nav a:hover {
+            background: #ffd803;
+            color: #232946;
+        }
+        .search-bar-container {
+            margin: 18px auto 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: none;
+        }
+        .search-bar {
+            position: relative;
+            width: 320px;
+        }
+        .search-bar input[type="text"] {
+            width: 100%;
+            padding: 10px 40px 10px 16px;
+            border-radius: 20px;
+            border: none;
+            font-size: 1rem;
+            outline: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        }
+        .search-bar .search-icon {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.2rem;
+            color: #888;
+            pointer-events: none;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 16px;
+        }
+        .blog-list {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+        .blog-post {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            padding: 32px 28px;
+            transition: box-shadow 0.2s;
+            display: flex;
+            gap: 28px;
+            align-items: flex-start;
+        }
+        .blog-post:hover {
+            box-shadow: 0 4px 24px rgba(35,41,70,0.13);
+        }
+        .blog-image {
+            width: 120px;
+            min-width: 120px;
+            height: 120px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-right: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .blog-content {
+            flex: 1;
+        }
+        .blog-post h2 {
+            margin-top: 0;
+            color: #232946;
+            font-size: 2rem;
+        }
+        .blog-meta {
+            color: #888;
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+        }
+        .blog-post p {
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+        footer {
+            background: #232946;
+            color: #fff;
+            text-align: center;
+            padding: 18px 0;
+            margin-top: 60px;
+            font-size: 1rem;
+        }
+        @media (max-width: 700px) {
+            .navbar {
+                flex-direction: column;
+                height: auto;
+                gap: 10px;
+                padding: 10px 8px;
+            }
+            .navbar-logo {
+                margin-bottom: 8px;
+            }
+            nav {
+                gap: 10px;
+            }
+            .blog-post {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .blog-image {
+                width: 100%;
+                min-width: 0;
+                height: 180px;
+                margin-bottom: 10px;
+            }
+        }
+        @media (max-width: 600px) {
+            .container { padding: 0 6px; }
+            .blog-post { padding: 18px 8px; }
+            .search-bar { width: 98vw; }
+            .navbar-title { font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="navbar-logo">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=256&q=80" alt="Logo">
+                <span class="navbar-title">My Blog Website</span>
+            </div>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Blogs</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+        <!-- <div class="search-bar-container">
+            <form class="search-bar" autocomplete="off">
+                <input type="text" placeholder="Search blog posts...">
+                <span class="search-icon">&#128269;</span>
+            </form>
+        </div> -->
+    </header>
+    <div class="container">
+        <div class="blog-list">
+            <div class="blog-post">
+                <img class="blog-image" src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="Coding">
+                <div class="blog-content">
+                    <h2>How to Start Coding</h2>
+                    <div class="blog-meta">Posted on September 1, 2025 by Om Singh</div>
+                    <p>
+                        Coding is a valuable skill in today's digital world. To start coding, choose a beginner-friendly language like Python or JavaScript, use online resources, and practice by building small projects. Consistency and curiosity are key!
+                    </p>
+                </div>
+            </div>
+            <div class="blog-post">
+                <img class="blog-image" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Productive Learning">
+                <div class="blog-content">
+                    <h2>10 Tips for Productive Learning</h2>
+                    <div class="blog-meta">Posted on August 28, 2025 by Om Singh</div>
+                    <p>
+                        Productive learning involves setting clear goals, taking regular breaks, and using active recall. Stay organized, avoid multitasking, and review your progress weekly to maximize your learning efficiency.
+                    </p>
+                </div>
+            </div>
+            <div class="blog-post">
+                <img class="blog-image" src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Web Development">
+                <div class="blog-content">
+                    <h2>Why Web Development is Awesome</h2>
+                    <div class="blog-meta">Posted on August 20, 2025 by Om Singh</div>
+                    <p>
+                        Web development allows you to create interactive websites and applications. It's a creative field with endless opportunities, and you can see your work come to life instantly. Start learning HTML, CSS, and JavaScript to begin your journey!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</html></body>    </footer>        &copy; 2025 My Blog Website. All rights reserved.    <footer>    <footer>
+        &copy; 2025 My Blog Website. All rights reserved.
+    </footer>
+</body>
+</html>
