@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Sweet Delights</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body class="bg-white text-gray-800">
+  <!-- Navbar -->
+  <header class="w-full shadow-md bg-yellow-100 fixed top-0 left-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+      <h1 class="text-2xl font-bold text-yellow-700">🥐 Sweet Delights</h1>
+      <nav class="flex gap-6">
+        <a href="index.html" class="hover:text-yellow-600">Home</a>
+        <a href="about.html" class="hover:text-yellow-600">About</a>
+        <a href="menu.html" class="hover:text-yellow-600">Menu</a>
+        <a href="contact.html" class="hover:text-yellow-600">Contact</a>
+      </nav>
+      <button id="cartBtn" class="relative">
+        <i data-lucide="shopping-cart"></i>
+        <span id="cartCount" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-1 rounded">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="pt-24 px-6 max-w-5xl mx-auto py-16">
+    <h2 class="text-4xl font-bold text-yellow-800 mb-6">Our Story</h2>
+    <p class="text-gray-600 leading-relaxed mb-6">
+      At Sweet Delights, baking is not just a craft, it’s our passion. Started in 2010 by a family of bakers, our shop
+      quickly became the town’s favorite spot for fresh breads, fluffy cakes, and buttery croissants.
+    </p>
+    <p class="text-gray-600 leading-relaxed">
+      We believe in using the finest ingredients and traditional baking methods to create flavors that bring joy to every bite.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-8 mt-10">
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Bakery shop" class="rounded-xl shadow-lg">
+      <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=600&q=80" alt="Our team" class="rounded-xl shadow-lg">
+      <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=600&q=80" alt="Cupcakes" class="rounded-xl shadow-lg">
+      <img src="https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=600&q=80" alt="Pastries" class="rounded-xl shadow-lg">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-yellow-100 py-6 text-center text-gray-700">
+    <p>© 2025 Sweet Delights Bakery | All Rights Reserved</p>
+  </footer>
+  <!-- Cart Modal -->
+<div id="cartModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+  <div class="bg-white w-11/12 md:w-2/3 lg:w-1/2 rounded-xl shadow-lg p-6">
+    <div class="flex justify-between items-center mb-4">
+      <h3 class="text-xl font-bold text-yellow-700">Your Cart</h3>
+      <button id="closeCart" class="text-gray-600 hover:text-red-500">✕</button>
+    </div>
+
+    <div id="cartItems" class="space-y-3 max-h-60 overflow-y-auto"></div>
+
+    <div class="flex justify-between items-center mt-4 font-bold text-lg">
+      <span>Total:</span>
+      <span id="totalPrice">₹0</span>
+    </div>
+
+    <div class="flex justify-end gap-4 mt-6">
+      <button id="clearCart" class="bg-gray-300 text-gray-800 px-4 py-2 rounded-xl">Clear</button>
+      <button id="checkoutBtn" class="bg-yellow-500 text-white px-4 py-2 rounded-xl">Checkout</button>
+    </div>
+  </div>
+</div>
+
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

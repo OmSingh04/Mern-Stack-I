@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Sweet Delights</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-white text-gray-800">
+  <!-- Navbar -->
+  <header class="w-full shadow-md bg-yellow-100 fixed top-0 left-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+      <h1 class="text-2xl font-bold text-yellow-700">🥐 Sweet Delights</h1>
+      <nav class="flex gap-6">
+        <a href="index.html" class="hover:text-yellow-600">Home</a>
+        <a href="about.html" class="hover:text-yellow-600">About</a>
+        <a href="menu.html" class="hover:text-yellow-600">Menu</a>
+        <a href="contact.html" class="hover:text-yellow-600">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contact Form -->
+  <section class="pt-24 max-w-4xl mx-auto px-6 py-16">
+    <h2 class="text-4xl font-bold text-yellow-800 mb-6 text-center">Get in Touch</h2>
+    <form class="bg-yellow-50 p-8 rounded-xl shadow-md space-y-4">
+      <input type="text" placeholder="Your Name" class="w-full p-3 border rounded">
+      <input type="email" placeholder="Your Email" class="w-full p-3 border rounded">
+      <textarea placeholder="Your Message" class="w-full p-3 border rounded h-32"></textarea>
+      <button class="bg-yellow-500 text-white px-6 py-2 rounded-xl hover:scale-105 transition">Send Message</button>
+    </form>
+
+    <div class="mt-10">
+      <iframe class="w-full h-64 rounded-xl shadow-md" src="https://maps.google.com/maps?q=bakery&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-yellow-100 py-6 text-center text-gray-700">
+    <p>© 2025 Sweet Delights Bakery | All Rights Reserved</p>
+  </footer>
+<!-- Cart Modal -->
+<div id="cartModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+  <div class="bg-white w-11/12 md:w-2/3 lg:w-1/2 rounded-xl shadow-lg p-6">
+    <div class="flex justify-between items-center mb-4">
+      <h3 class="text-xl font-bold text-yellow-700">Your Cart</h3>
+      <button id="closeCart" class="text-gray-600 hover:text-red-500">✕</button>
+    </div>
+
+    <div id="cartItems" class="space-y-3 max-h-60 overflow-y-auto"></div>
+
+    <div class="flex justify-between items-center mt-4 font-bold text-lg">
+      <span>Total:</span>
+      <span id="totalPrice">₹0</span>
+    </div>
+
+    <div class="flex justify-end gap-4 mt-6">
+      <button id="clearCart" class="bg-gray-300 text-gray-800 px-4 py-2 rounded-xl">Clear</button>
+      <button id="checkoutBtn" class="bg-yellow-500 text-white px-4 py-2 rounded-xl">Checkout</button>
+    </div>
+  </div>
+</div>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

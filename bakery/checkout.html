@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Sweet Delights</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body class="bg-white text-gray-800">
+  <!-- Navbar -->
+  <header class="w-full shadow-md bg-yellow-100 fixed top-0 left-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+      <h1 class="text-2xl font-bold text-yellow-700">🥐 Sweet Delights</h1>
+      <nav class="flex gap-6">
+        <a href="index.html" class="hover:text-yellow-600">Home</a>
+        <a href="about.html" class="hover:text-yellow-600">About</a>
+        <a href="menu.html" class="hover:text-yellow-600">Menu</a>
+        <a href="contact.html" class="hover:text-yellow-600">Contact</a>
+      </nav>
+      <button id="cartBtn" class="relative">
+        <i data-lucide="shopping-cart"></i>
+        <span id="cartCount" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-1 rounded">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Checkout Section -->
+  <main class="pt-28 pb-16 max-w-4xl mx-auto px-6">
+    <h2 class="text-4xl font-bold text-yellow-800 text-center mb-10">Checkout</h2>
+
+    <div class="grid md:grid-cols-2 gap-10">
+      <!-- Order Summary -->
+      <div>
+        <h3 class="text-2xl font-semibold mb-4">Your Order</h3>
+        <div id="checkoutItems" class="bg-yellow-50 rounded-xl p-4 space-y-3">
+          <!-- Items will be loaded from cart -->
+        </div>
+        <div class="flex justify-between mt-4 font-bold text-lg">
+          <span>Total:</span>
+          <span id="checkoutTotal">₹0</span>
+        </div>
+      </div>
+
+      <!-- Customer Details -->
+      <div>
+        <h3 class="text-2xl font-semibold mb-4">Billing Details</h3>
+        <form id="checkoutForm" class="space-y-4">
+          <input type="text" placeholder="Full Name" required class="w-full border rounded-lg p-3">
+          <input type="email" placeholder="Email" required class="w-full border rounded-lg p-3">
+          <input type="tel" placeholder="Phone Number" required class="w-full border rounded-lg p-3">
+          <textarea placeholder="Address" required class="w-full border rounded-lg p-3"></textarea>
+
+          <select required class="w-full border rounded-lg p-3">
+            <option value="">Select Payment Method</option>
+            <option value="cod">Cash on Delivery</option>
+            <option value="card">Credit/Debit Card</option>
+            <option value="upi">UPI</option>
+          </select>
+
+          <button type="submit" class="w-full bg-yellow-500 text-white font-bold py-3 rounded-xl hover:scale-105 transition">
+            Place Order
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-yellow-100 py-6 text-center text-gray-700">
+    <p>© 2025 Sweet Delights Bakery | All Rights Reserved</p>
+  </footer>
+
+  <!-- Cart Modal -->
+  <div id="cartModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+    <div class="bg-white w-11/12 md:w-2/3 lg:w-1/2 rounded-xl shadow-lg p-6">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="text-xl font-bold text-yellow-700">Your Cart</h3>
+        <button id="closeCart" class="text-gray-600 hover:text-red-500">✕</button>
+      </div>
+      <div id="cartItems" class="space-y-3 max-h-60 overflow-y-auto"></div>
+      <div class="flex justify-between items-center mt-4 font-bold text-lg">
+        <span>Total:</span>
+        <span id="totalPrice">₹0</span>
+      </div>
+      <div class="flex justify-end gap-4 mt-6">
+        <button id="clearCart" class="bg-gray-300 text-gray-800 px-4 py-2 rounded-xl">Clear</button>
+        <button id="checkoutBtn" class="bg-yellow-500 text-white px-4 py-2 rounded-xl">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>
